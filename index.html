@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia de San Juan</title>
+    <!-- Agregar el archivo CSS de Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Agregar Font Awesome para el icono de luna -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-800 dark:text-white">
+    <!-- Barra de navegación -->
+    <nav class="bg-yellow-400 p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold mx-auto">Iglesia de San Juan</h1>
+        <div class="menu-toggle block md:hidden">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="hidden md:flex space-x-4">
+            <li><a href="#bienvenida">Bienvenida</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menú desplegable para dispositivos móviles -->
+    <div class="menu hidden md:hidden">
+        <a href="#bienvenida">Bienvenida</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#ubicacion">Ubicación</a>
+    </div>
+
+    <!-- Sección de bienvenida -->
+    <section id="bienvenida" class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">Bienvenidos a nuestra iglesia</h2>
+            <p class="text-lg text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+    </section>
+
+    <!-- Sección de horarios -->
+    <section id="horarios" class="py-16 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">Horarios de Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-4">Servicio Dominical</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="mt-4">Horario: 10:00 AM - 12:00 PM</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-4">Servicio de Oración</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="mt-4">Horario: 6:00 PM - 8:00 PM</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-4">Grupo de Estudio Bíblico</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="mt-4">Horario: 7:00 PM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de mapa -->
+    <section id="ubicacion" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">Ubicación</h2>
+            <div class="iframe-container">
+                <iframe class="rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.4405665268744!2d-77.04176558512605!3d-12.087864991477144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf54a0a3aa9b%3A0xd1f18e7a01f16f97!2sSan%20Juan%20Bautista%20Church!5e0!3m2!1sen!2spe!4v1631309565067!5m2!1sen!2spe" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para el modo oscuro -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+        });
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark');
+        }
+    </script>
+</body>
+
+</html>
