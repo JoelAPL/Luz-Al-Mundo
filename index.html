@@ -1,98 +1,501 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iglesia de San Juan</title>
-    <!-- Agregar el archivo CSS de Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Agregar Font Awesome para el icono de luna -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.jpeg" type="image/x-icon">
 
-<body class="bg-white text-gray-800 dark:bg-gray-800 dark:text-white">
-    <!-- Barra de navegación -->
-    <nav class="bg-yellow-400 p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold mx-auto">Iglesia de San Juan</h1>
-        <div class="menu-toggle block md:hidden">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="hidden md:flex space-x-4">
-            <li><a href="#bienvenida">Bienvenida</a></li>
-            <li><a href="#horarios">Horarios</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-        </ul>
-    </nav>
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- Menú desplegable para dispositivos móviles -->
-    <div class="menu hidden md:hidden">
-        <a href="#bienvenida">Bienvenida</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#ubicacion">Ubicación</a>
-    </div>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Sección de bienvenida -->
-    <section id="bienvenida" class="bg-gray-100 py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-semibold text-center mb-8">Bienvenidos a nuestra iglesia</h2>
-            <p class="text-lg text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-        </div>
-    </section>
+        <title>Iglesia Luz Al Mundo</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-fire-line nav__logo-icon"></i>Luz Al Mundo
+                </a>
 
-    <!-- Sección de horarios -->
-    <section id="horarios" class="py-16 bg-gray-200">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-semibold text-center mb-8">Horarios de Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <h3 class="text-xl font-semibold mb-4">Servicio Dominical</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="mt-4">Horario: 10:00 AM - 12:00 PM</p>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Nosotros</a>
+                        </li>
+                        <!-- <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li> -->
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contáctanos</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <h3 class="text-xl font-semibold mb-4">Servicio de Oración</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="mt-4">Horario: 6:00 PM - 8:00 PM</p>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <h3 class="text-xl font-semibold mb-4">Grupo de Estudio Bíblico</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="mt-4">Horario: 7:00 PM - 9:00 PM</p>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/home.jpeg" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Bienvenidos a <br> Luz Al Mundo                         </h1>
+                        <p class="home__description">
+                            'Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder. '
+
+                            S. Mateo 5:14
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            Conócenos <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.youtube.com/@alejandroalvarez8526" target="_blank" class="home__social-link">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/iglesialuzalmundo.pty/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="assets/img/about.png" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                         Declaración de fe  
+                        </h2>
+
+                        <p class="about__description">
+                        Estamos bajo la coberura de la Iglesia del Evangelio Cuadrangular. 
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Creemos que Jesucristo es nuestro salvador.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Creemos que Jesucristo sana.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Creemos que Jesucristo Bautiza con el Espíritu Santo.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Creemos que Jesucristo viene otra vez. 
+                            </p>
+                        </div>
+
+                        <!-- <a href="#" class="button--link button--flex">
+                            Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a> -->
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Nuestra Declaración 
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">
+                                <i class="ri-focus-2-fill"></i>
+                            </div>
+                            <h3 class="steps__card-title">Visión</h3>
+                            <p class="steps__card-description">
+                                Ser una Iglesia desable por todo aquel que nos visite, ungida por DIOS, donde podamos mostrar la manifestación del Espíritu Santo y el amor de Jesús.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">
+                                <i class="ri-rocket-fill"></i></div>
+                            <h3 class="steps__card-title">Misión</h3>
+                            <p class="steps__card-description">
+                                Hacer discípulos, formar líderes y establecer servidores de Dios a través de una Iglesia con influencia, compromiso y empatía... 
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">
+                                <i class="ri-heart-fill"></i>
+                            </div>
+                            <h3 class="steps__card-title">Valores</h3>
+                            <p class="steps__card-description">
+                                Proximamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PRODUCTS 
+                <section class="product section container" id="products">
+                    <h2 class="section__title-center">
+                        Check out our <br> products
+                    </h2>
+
+                    <p class="product__description">
+                        Here are some selected plants from our showroom, all are in excellent 
+                        shape and has a long life span. Buy and enjoy best quality.
+                    </p>
+
+                    <div class="product__container grid">
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product1.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Cacti Plant</h3>
+                            <span class="product__price">$19.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product2.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Cactus Plant</h3>
+                            <span class="product__price">$11.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product3.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Aloe Vera Plant</h3>
+                            <span class="product__price">$7.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product4.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Succulent Plant</h3>
+                            <span class="product__price">$5.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product5.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Succulent Plant</h3>
+                            <span class="product__price">$10.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+
+                        <article class="product__card">
+                            <div class="product__circle"></div>
+
+                            <img src="assets/img/product6.png" alt="" class="product__img">
+
+                            <h3 class="product__title">Green Plant</h3>
+                            <span class="product__price">$8.99</span>
+
+                            <button class="button--flex product__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                        </article>
+                    </div>
+                </section>
+            ====================-->
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Algunas Pregunas comunes <br> Sobre la Iglesia
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿Cuál es el horario de nuestros servicios?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Los Servicios incian los días Viernes a las 7:00 PM y los días Domingo a las 9:00AM.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿Qué actividades hay para niños y jóvenes?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                Hay actividades como escuela dominical para niños y grupos de jóvenes los días sábados 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿La iglesia ofrece estudios bíblicos o grupos pequeños?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Correcto, se realizan celulas y discipulados en distinos hogares que fortalecen el crecimiento espiritual 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿Cómo puedo involucrarme en la iglesia?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Actualmente tenemos grupos pequeños los días domingo que orientan en la vida espiritual y como ser iglesia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿Cómo puedo donar o apoyar financieramente a la iglesia?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Cada uno debe dar según lo que haya decidido en su corazón, no de mala gana ni por obligación, porque Dios ama al que da con alegría. (2 Corintios 9:7)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    ¿Cuál es la estructura de liderazgo de la iglesia?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    La iglesia esa conformada por un Equipo pastoral, Ministerio de Jóvenes, niños, Alabanza y adoración, Evangelismo, Educación cristiana...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                           Para mas informacion:
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Chateanos</h3>
+                                <a href="https://api.whatsapp.com/send?l=es&amp;phone=50760276800" class="footer__social">
+                                <span class="contact__description nav__link">
+                                    <i class="ri-whatsapp-line contact__icon"></i>
+                                    +507 6027-6800
+                                </span>
+                            </a>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Nuestro Email</h3>
+                                <a href="mailto:luzalmundo.info@gmail.com" class="footer__social">
+                                    <span class="contact__description nav__link">
+                                        <i class="ri-mail-line contact__icon"></i>
+                                        luzalmundo.info@gmail.com
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1969.6780466306857!2d-79.5337234!3d9.1222733!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab57004e9b2d11%3A0xdb706be89d0dc5c9!2sIglesia%20Cuadrangular%20Luz%20Al%20Mundo!5e0!3m2!1ses!2spa!4v1713684871332!5m2!1ses!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-fire-line nav__logo-icon"></i>Luz Al Mundo
+                    </a>
+
+                    <h3 class="footer__title">
+                        Siguenos en Instagram <br> para no perderte de nada. 
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="hidden" placeholder="" class="footer__input">
+
+                        <a href="https://www.instagram.com/iglesialuzalmundo.pty/" target="_blank" class="home__social-link">
+                            <button class="button button--flex footer__button">
+                                Escribenos 
+
+                                <i class="ri-instagram-line button__icon">
+                                </i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Dirección</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Iglesia Cuadrangular Luz Al Mundo
+                            Calle 712 712, Panama City, Panamá Province</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Siguenos en: </h3>
+
+                    <ul class="footer__data">
+                        <!-- <li class="footer__information">+999 888 777</li> -->
+                        
+                        <div class="footer__social">
+                            <a href="https://www.youtube.com/@alejandroalvarez8526" class="footer__social-link">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/iglesialuzalmundo.pty/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all credit cards
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div> -->
             </div>
-        </div>
-    </section>
 
-    <!-- Sección de mapa -->
-    <section id="ubicacion" class="py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-semibold text-center mb-8">Ubicación</h2>
-            <div class="iframe-container">
-                <iframe class="rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.4405665268744!2d-77.04176558512605!3d-12.087864991477144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf54a0a3aa9b%3A0xd1f18e7a01f16f97!2sSan%20Juan%20Bautista%20Church!5e0!3m2!1sen!2spe!4v1631309565067!5m2!1sen!2spe" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+            <p class="footer__copy">&#169; Joel Alvarez. All rigths reserved</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
 
-    <!-- Script para el modo oscuro -->
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark'));
-        });
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        if (isDarkMode) {
-            document.body.classList.add('dark');
-        }
-    </script>
-</body>
-
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
