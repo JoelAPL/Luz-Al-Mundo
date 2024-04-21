@@ -1,4 +1,4 @@
-# Responsive Plants Website 🎍 
+<!-- # Responsive Plants Website 🎍 
 ## [Watch it on youtube](https://youtu.be/lpzExNZDizI)
 ### Responsive Plants Website 🎍
 
@@ -10,4 +10,4 @@
 
 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
-![plants website](/preview.png)
+![plants website](/preview.png) -->
