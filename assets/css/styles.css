@@ -887,7 +887,23 @@ the website, in dark theme
 }
 
 @media screen and (max-width: 600px) {
+  
+        /* Establece un contenedor flexible */
+        .map-container {
+          position: relative;
+          width: 100%; /* El contenedor ocupa todo el ancho disponible */
+          padding-top: 56.25%; /* Mantiene la proporción 16:9 para el mapa */
+      }
 
+      /* El iframe se ajusta al tamaño del contenedor */
+      .map-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%; /* Ancho completo */
+          height: 100%; /* Altura completa */
+          border: 0; /* Elimina los bordes */
+      }
   .home__data {
     text-align: center;
   }
