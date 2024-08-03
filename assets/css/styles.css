@@ -851,6 +851,22 @@ the website, in dark theme
   border-radius: .5rem;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: auto;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 360px; /* Ajusta esta medida para cambiar el tamaño en pantallas grandes */
+  height: auto;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){
@@ -917,9 +933,7 @@ text-align: center
 ;  }
   
 }
-.yS1foEzME51a7cbEy7gg{
-  display: none !important;
-}
+
 /* For medium devices */
 @media screen and (min-width: 576px){
 
