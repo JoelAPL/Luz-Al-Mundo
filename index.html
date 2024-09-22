@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,27 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
         <!--=============== METADATOS PARA SEO ===============-->
-        <meta name="description" content="Bienvenidos a Iglesia Luz Al Mundo, una comunidad cristiana bajo la cobertura de la Iglesia del Evangelio Cuadrangular. Únase a nosotros para los servicios y actividades para toda la familia.">
+        <meta name="description" content="Bienvenidos a Iglesia Cuadrangular Luz Al Mundo. Conoce un poco sobre nuestros servicios y actividades para toda la familia.">
         <meta name="keywords" content="Iglesia, Luz Al Mundo, Evangelio Cuadrangular, Cristianismo, Fe, Jesucristo, Servicios Religiosos, Comunidad Cristiana, Panamá, villa acuario">
-        <meta name="author" content="Iglesia Cuadrangular Luz Al Mundo Panamá">
+        <meta name="author" content="Iglesia Cuadrangular Luz Al Mundo">
         <meta name="robots" content="index, follow">
 
         <!--=============== METADATOS PARA REDES SOCIALES ===============-->
-        <meta property="og:title" content="Iglesia Luz Al Mundo">
-        <meta property="og:description" content="Bienvenidos a Iglesia Luz Al Mundo, una comunidad cristiana bajo la cobertura de la Iglesia del Evangelio Cuadrangular. Únase a nosotros para los servicios y actividades para toda la familia.">
+        <meta property="og:title" content="Iglesia Cuadrangular Luz Al Mundo">
+        <meta property="og:description" content="Bienvenidos a Iglesia Cuadrangular Luz Al Mundo. Conoce un poco sobre nuestros servicios y actividades para toda la familia.">
         <meta property="og:image" content="../assets/img/home.jpeg">
-        <meta property="og:url" content="https://www.iglesialuzalmundo.com">
+        <meta property="og:url" content="https://www.iglesialuzalmundo.org">
         <meta property="og:type" content="website">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LE6VTJRJ9B"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LE6VTJRJ9B');
+        </script>
 
         <title>Iglesia Luz Al Mundo</title>
     </head>
@@ -74,9 +84,10 @@
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <div class="home__container container grid">
-                    <img src="assets/img/home.jpeg" alt="" class="home__img">
+                    <img src="assets/img/home.jpeg" alt="inicio" class="home__img">
 
                     <div class="home__data">
+                        <p>Iglesia Cuadrangular</p>
                         <h1 class="home__title">
                             Bienvenidos a <br> Luz Al Mundo                         </h1>
                         <p class="home__description">
@@ -84,7 +95,7 @@
 
                             S. Mateo 5:14
                         </p>
-                        <a href="#about" class="button button--flex">
+                        <a href="#contact" class="button button--flex">
                             Conócenos <i class="ri-arrow-right-down-line button__icon"></i>
                         </a>
                         
@@ -111,12 +122,12 @@
             <!--==================== ABOUT ====================-->
             <section class="about section container" id="about">
                 <div class="about__container grid">
-                    <img src="assets/img/about.png" alt="" class="about__img">
+                    <img src="assets/img/about.png" alt="nosotros" class="about__img">
 
                     <div class="about__data">
-                        <h2 class="section__title about__title">
+                        <h1 class="section__title about__title">
                          Declaración de fe  
-                        </h2>
+                        </h1>
 
                         <p class="about__description">
                         Estamos bajo la coberura de la Iglesia del Evangelio Cuadrangular. 
@@ -152,9 +163,9 @@
             <!--==================== STEPS ====================-->
             <section class="steps section container">
                 <div class="steps__bg">
-                    <h2 class="section__title-center steps__title">
+                    <h1 class="section__title-center steps__title">
                         Nuestra Declaración 
-                    </h2>
+                    </h1>
 
                     <div class="steps__container grid">
                         <div class="steps__card">
@@ -320,8 +331,8 @@
 
                         <div class="contact__data">
                             <div class="contact__information">
-                                <h3 class="contact__subtitle">Whatsapp</h3>
-                                <a href="https://api.whatsapp.com/send?l=es&amp;phone=50760276800" class="footer__social">
+                                <h3 class="contact__subtitle">WhatsApp</h3>
+                                <a target="_blank" href="https://api.whatsapp.com/send?l=es&amp;phone=50760276800" class="footer__social">
                                 <span class="contact__description nav__link">
                                     <i class="ri-whatsapp-line contact__icon"></i>
                                     +507 6027-6800
@@ -331,7 +342,7 @@
 
                             <div class="contact__information">
                                 <h3 class="contact__subtitle">Nuestro Email</h3>
-                                <a href="mailto:luzalmundo.info@gmail.com" class="footer__social">
+                                <a target="_blank" href="mailto:luzalmundo.info@gmail.com" class="footer__social">
                                     <span class="contact__description nav__link">
                                         <i class="ri-mail-line contact__icon"></i>
                                         luzalmundo.info@gmail.com
@@ -395,13 +406,13 @@
                         <!-- <li class="footer__information">+999 888 777</li> -->
                         
                         <div class="footer__social">
-                            <a href="https://www.youtube.com/@alejandroalvarez8526" class="footer__social-link">
+                            <a target="_blank" href="https://www.youtube.com/@alejandroalvarez8526" class="footer__social-link">
                                 <i class="ri-youtube-fill"></i>
                             </a>
-                            <a href="https://www.instagram.com/iglesialuzalmundo.pty/" class="footer__social-link">
+                            <a target="_blank" href="https://www.instagram.com/iglesialuzalmundo.pty/" class="footer__social-link">
                                 <i class="ri-instagram-line"></i>
                             </a>
-                            <a href="https://twitter.com/" class="footer__social-link">
+                            <a target="_blank" href="https://twitter.com/" class="footer__social-link">
                                 <i class="ri-twitter-fill"></i>
                             </a>
                         </div>
