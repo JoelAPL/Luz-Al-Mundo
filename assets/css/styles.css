@@ -1011,6 +1011,59 @@ text-align: center
     width: initial;
   }
 }
+/* Contenedor principal centrado */
+#youtube-feed {
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  padding: 2rem 0;
+}
+
+/* Youtube */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  max-width: 960px;  /* limita el ancho para que no ocupe todo el ancho */
+  width: 100%;
+  /* Para que el carrusel no toque los bordes y se vea centrado */
+  margin: 0 auto;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.video-card {
+  min-width: 300px;
+  scroll-snap-align: start;
+  background: #f5f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+iframe {
+  width: 100%;
+  height: 170px;
+  border: none;
+}
+
+.video-title {
+  padding: 10px;
+  font-size: 14px;
+}
 
 /* For large devices */
 @media screen and (min-width: 992px){

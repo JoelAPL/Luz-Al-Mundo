@@ -140,3 +140,34 @@ sr.reveal(`.home__social`, {delay: 600})
 sr.reveal(`.about__img, .contact__box`,{origin: 'left'})
 sr.reveal(`.about__data, .contact__form`,{origin: 'right'})
 sr.reveal(`.steps__card, .product__card, .questions__group, .footer`,{interval: 100})
+
+// =============== YOUTUBE CAROUSEL ===============
+    const apiKey = 'AIzaSyCDoQZuhvY9UwctMFOf9YzGZXo2SP3aHZA'; // Reemplaza con tu clave
+    const channelId = 'UCDs9GyidSqxyAgZISyRW1Cg'; // Reemplaza con tu ID de canal
+    const maxResults = 10;
+ 
+    async function fetchVideos() {
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`);
+      const data = await res.json();
+
+      if (data.items) {
+        const carousel = document.getElementById('carousel');
+        data.items.forEach(item => {
+          if (item.id.kind === 'youtube#video') {
+            const videoId = item.id.videoId;
+            const title = item.snippet.title;
+            const card = document.createElement('div');
+            card.className = 'video-card';
+            card.innerHTML = `
+              <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+              <div class="video-title">${title}</div>
+            `;
+            carousel.appendChild(card);
+          }
+        });
+      } else {
+        console.error('No se pudieron cargar los videos:', data);
+      }
+    }
+
+    fetchVideos();
