@@ -1,0 +1,197 @@
+/* Variables de color */
+:root {
+  --clr-bg: #f9f9f9;
+  --clr-primary: #a4d4ae;
+  --clr-secondary: #ffd6a5;
+  --clr-accent: #ff9a9d;
+  --clr-text: #333;
+}
+
+/* Reinicio */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.5;
+}
+
+/* Contenedor centrado */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--clr-primary);
+  padding: 1rem 0;
+}
+.site-header .logo {
+  font-size: 1.5rem;
+}
+.site-header .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.site-nav a {
+  color: var(--clr-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  background:#ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+.hero button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--clr-accent);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Recursos */
+.resources {
+  padding: 2rem 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Quiz */
+.quiz {
+  background: #fff;
+  padding: 2rem 0;
+}
+#answers button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--clr-primary);
+  background: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--clr-primary);
+  text-align: center;
+  padding: 1rem 0;
+}
+.site-footer .social a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+  }
+  .site-nav.open {
+    display: block;
+    background: var(--clr-primary);
+  }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .site-nav a {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+/* ——————————————————————————————————————
+   Estilos para el mini‑juego "Atrapa la burbuja"
+   —————————————————————————————————————— */
+.game-section {
+  padding: 2rem 0;
+  background: #f1f1f1;
+}
+.game-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #e09226;
+  text-align: center;
+}
+#bubbleGame {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: #fff;
+  border: 2px solid var(--clr-secondary);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  touch-action: none;
+}
+.game-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.game-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: .5rem;
+  color: #856404;
+  text-align: center;
+}
+.game-message.lose {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.btn {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1rem;
+  background: var(--clr-primary);
+  border: none;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--clr-accent);
+}
+@media (hover: none), (pointer: coarse) {
+  #bubbleGame {
+    margin-bottom: .5rem;
+  }
+  .btn {
+    margin-top: .5rem;
+  }
+}

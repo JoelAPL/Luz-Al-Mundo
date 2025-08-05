@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="../assets/img/favicon.jpeg" type="image/x-icon" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <!--=============== METADATOS PARA SEO ===============-->
+    <meta name="description" content="Bienvenidos a Iglesia Cuadrangular Luz Al Mundo. Conoce un poco sobre nuestros servicios y actividades para toda la familia." />
+    <meta name="keywords" content="Iglesia, Luz Al Mundo, Evangelio Cuadrangular, Cristianismo, Fe, Jesucristo, Servicios Religiosos, Comunidad Cristiana, Panamá, villa acuario" />
+    <meta name="author" content="Iglesia Cuadrangular Luz Al Mundo" />
+    <meta name="robots" content="index, follow" />
+
+    <!--=============== METADATOS PARA REDES SOCIALES ===============-->
+    <meta property="og:title" content="Iglesia Cuadrangular Luz Al Mundo" />
+    <meta property="og:description" content="Bienvenidos a Iglesia Cuadrangular Luz Al Mundo. Conoce un poco sobre nuestros servicios y actividades para toda la familia." />
+    <meta property="og:image" content="../assets/img/home.jpeg" />
+    <meta property="og:url" content="https://www.iglesialuzalmundo.org" />
+    <meta property="og:type" content="website" />
+
+    <!--=============== GOOGLE ANALYTICS ===============-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LE6VTJRJ9B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-LE6VTJRJ9B');
+    </script>
+
+    <title>Adolescentes LAM</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav__logo">
+                <i class="ri-fire-line nav__logo-icon"></i>Luz Al Mundo
+            </a>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="../" class="nav__link active-link">Conócenos</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HERO ====================-->
+        <section class="hero" id="home" style="margin-top: 50px;">
+            <div class="hero__container container grid">
+                <div class="hero__data">
+                    <h1 class="hero__title">Adolescentes LAM</h1>
+                    <p class="hero__description">
+                        Bienvenidos a la chicos y chicas de la Iglesia Cuadrangular Luz Al Mundo. <br> Aquí encontrarás recursos, actividades (PROXIMAMENTE).
+                        <br> Por mientras juguemos un juego. El que más puntos obtenga será el ganador del mes: Enviar captura al lider: Joel 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--==================== JUEGO ====================-->
+        <section id="game" class="game-section">
+            <div class="container">
+                <h2><b>¡Atrapa la Burbuja!</b></h2>
+                <canvas id="bubbleGame"></canvas>
+                <div class="game-info">
+                    <span>Tiempo: <span id="timer">20</span>s</span>
+                    <span>Puntos: <span id="score">0</span></span>
+                </div>
+                <div id="game-message" class="game-message" hidden></div>
+                <button id="restart" class="btn">Inciar a jugar</button>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="script.js"></script>
+</body>
+</html>
